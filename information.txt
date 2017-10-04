@@ -1,0 +1,10 @@
+source : http://virginiacourtdata.org/ 
+
+NOTE : Have not gone through the data to not remove cases which are not drug related . Do that ! 
+Description : this is a list of every circuit court case that has happened in virginia . 
+
+The goal here is to extract only drug related offense data for the years that data is available for , then classify it based on the different kind of drug arrests , visualize it and then ask "why?". 
+
+Note : not considering civil cases , because by definition , a civil case is between two people/entities and there is no government involved ( in the dispute , not talking about acting as a mediator). 
+
+There is also another set of data titled "Circuit and District Criminal Cases By Defendant". At first glance , there does not seem to be any difference between these and the data that I have already gathered ( more specifically , the stuff that I need out of it...will ask team members to check it again just in case)

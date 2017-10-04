@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ASK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="tinderesque.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="main.js" type="text/javascript"></script>
+
+
+
+
+  <style type="text/css">
+    body {
+      font-family: helvetica, arial, sans-serif;
+      background: #000000
+      background: linear-gradient(#333,#666);
+      color: #ccc;
+      font-size: 16px;
+      padding: 0;
+      margin: 0;
+    }
+    header, section, footer {
+      display: block;
+      padding: 0.5em 1em;
+    }
+    header, footer {
+      background: #000;
+      background: linear-gradient(#111,#000);
+    }
+    a {color: lime;}
+    h1, h2 {
+      color: #000000;
+      font-size: 24px;
+      font-weight: normal;
+    }
+    h2 {font-size: 20px;}
+    .floaty .cardcontainer {
+      float: left;
+    }
+    h2 {clear: both;}
+    footer, header, section {
+      display: block;
+    }
+    footer {
+      font-size: 10px;
+      text-align: right;
+      padding: 3em 0.5em 1em 0.5em;
+    }
+    .nobutton:hover .yes {
+      -webkit-animation: yay 0.7s ease-out;
+      animation: yay 0.7s ease-out;
+    }
+    .nobutton:hover .nope {
+      -webkit-animation: nope 0.7s ease-out;
+      animation: nope 0.7s ease-out;
+    }
+    .card {
+      background: powderblue;
+      color: #000;
+    }
+    .list ul.cardlist {
+      padding-bottom: 10px;
+
+      .container {
+    padding: 25px;
+    position: fixed;
+    left: 25%;
+}
+li.ui-state-default{
+    background:#fff0;
+    border:none;
+    border-bottom:1px solid #ddd;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+li.ui-state-default:last-child{
+    border-bottom:none;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+body {
+  background-color:#fff;
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto,arial,sans-serif;
+}
+
+.btn,.form-control,.well {
+    border-radius:1px;
+    box-shadow:0 0 0;
+}
+
+.form-control {
+    border-color:#d7d7d7;
+}
+
+.btn-primary {
+    border-color:transparent;
+}
+
+.btn-primary, .list-group-item.active:focus {
+    background-color:#4285f4;
+} 
+
+.btn-plus {
+    background-color:#ffffff;
+    border-width:1px;
+    border-color:#dddddd;
+    box-shadow:1px 1px 0 #999999;
+    border-radius:3px;color:#666666;
+    text-shadow:0 0 1px #bbbbbb;
+}
+
+.well,.panel {
+    border-color:#d2d2d2;
+    box-shadow:0 1px 0 #cfcfcf;
+    border-radius:3px;
+}
+
+hr {
+ border-color:#ececec;
+}
+
+button {
+ outline: 0;
+}
+
+.btn span{
+ color:#666666;
+}
+
+.list-group-item:first-child,.list-group-item:last-child {
+ border-radius:0;
+}
+
+h3 { 
+ border:0 solid #efefef; 
+ border-bottom-width:1px;
+ padding-bottom:10px;
+}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>VAsk</h1>
+  </header>
+  
+
+<!--
+    <p><a href="https://github.com/codepo8/tinderesque">Get the code</a> and <a href="https://github.com/codepo8/tinderesque/blob/master/README.md">read the instructions</a> how to use it on GitHub.</p>
+
+    <h2>Animation demo: simply hover to see the effect</h2>
+
+    <div class="floaty">
+      <div class="cardcontainer nobutton">
+        <div class="yes card">Yes</div>
+      </div>
+      <div class="cardcontainer nobutton">
+        <div class="nope card">Nope</div>
+      </div>
+    </div>
+
+    <h2>Using buttons to vote yes or no</h2>
+
+    <div class="floaty">
+      <div class="cardcontainer">
+        <div class="card">Card</div>
+        <button class="but-nope">X</button>
+        <button class="but-yay">✔</button>
+      </div>
+
+      <div class="cardcontainer">
+        <div class="card">Card</div>
+        <button class="but-nope">X</button>
+        <button class="but-yay">✔</button>
+      </div>
+    </div>
+``  
+    <h2>Going through a list of cards</h2>
+
+    <div class="cardcontainer list">
+      <ul class="cardlist">
+        <li class="card current">#1</li>
+        <li class="card">#2</li>
+        <li class="card">#3</li>
+        <li class="card">#4</li>
+        <li class="card">#5</li>
+        <li class="card">#6</li>
+      </ul>
+      <button class="but-nope">X</button>
+      <button class="but-yay">✔</button>
+    </div>
+-->
+    <h2>Is this issue worth considering ?
+    <br> No  X Yes ✓  </h2>
+
+    <div class = "row">
+    <div class="col-sm-2">
+<a href="adopt/adopt.html" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-heart"></span> Engage </a>
+
+<a href="contact.html" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-earphone"></span> Contact </span></a>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-sm-6">
+
+
+<div class="cardcontainer list">
+      
+      
+
+      <ul class="cardlist">
+        <li class="card current"><img src = "images/repres2.jpg" title="
+        This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800"></li>
+        
+        <li class="card"><img src = "images/repres4.jpg"  title ="
+        This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/pack3.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "anigif.gif"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/pres2.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/drop4.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/drop2.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/pres4.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/pack4.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/repres2.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/drop3.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/pres1.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/repres1.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/repres6.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/drop1.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/repres3.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/repres5.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/pack2.jpg"  title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+        <li class="card"><img src = "images/pack1.jpg" title = "This shows number of school dropouts and number of opioid deaths in Fairfax County  
+        Do you think this relationship idea should be pursued  ? 
+        Data source : www.data.gov/this-is-a-link
+        Time period : 2000 - 2015  " height="800" width="800 "></li>
+
+      </ul>
+      
+
+      <span class="nopes">0</span>
+      <button class="but-nope">X</button>
+      <button class="but-yay">✔</button>
+      <span class="yays">0</span>
+      <h4> Hover on image for information </h4>
+      
+    </div></ul>
+  </section>
+
+</div>
+
+
+
+
+
+
+<div class="col-sm-4">
+
+<div class="container">
+    <div class="col-lg-4 col-sm-6 text-center">
+    <div class="well">
+        <h4>What is on your mind?</h4>
+    <div class="input-group">
+        <input type="text" id="userComment" class="form-control input-sm chat-input" placeholder="Write your message here..." />
+      <span class="input-group-btn" onclick="addComment()">     
+            <a href="#" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-comment"></span> Add Comment</a>
+        </span>
+    </div>
+    <hr data-brackets-id="12673">
+    <ul data-brackets-id="12674" id="sortable" class="list-unstyled ui-sortable">
+        <strong class="pull-left primary-font">James</strong>
+        <small class="pull-right text-muted">
+           <span class="glyphicon glyphicon-time"></span>7 mins ago</small>
+        </br>
+        <li class="ui-state-default"><span style="color:black;">I think this does not make sense because of x reasons , which is again due to y reasons .  </span>
+</li>
+        </br>
+         <strong class="pull-left primary-font">Taylor</strong>
+        <small class="pull-right text-muted">
+           <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+        </br>
+        <li class="ui-state-default"><span style="color:black;">I do not agree with what has been said because of x2 reasons , because of this and that as well . This is a sentence which does not make sense that I am typing in because I don't think people can read this fine a print with a 720 P display .</span> </li>
+        
+    </ul>
+    </div></div></div></div></div>
+
+
+
+
+<script src="tinderesque.js"></script>
+<script>
+
+  document.body.addEventListener('nopecard', function(ev) {
+     console.log(ev.detail);
+  });
+  document.body.addEventListener('yepcard', function(ev) {
+     console.log(ev.detail);
+  });
+  document.body.addEventListener('deckempty', function(ev) {
+     console.log(ev.detail);
+  });
+  document.body.addEventListener('cardchosen', function(ev) {
+     console.log(ev.detail);
+  });
+
+
+  document.body.addEventListener('nopecard', function(ev) {
+    var container = ev.detail.container;
+    var label = container.querySelector('.nopes');
+    if (label) {
+      var nopes = +container.nopes || 0;
+      nopes++;
+      container.nopes = nopes;
+      label.innerHTML = container.nopes;
+    }
+  });
+
+  document.body.addEventListener('yepcard', function(ev) {
+    var container = ev.detail.container;
+    var label = container.querySelector('.yays');
+    if (label) {
+      var yeps = +container.yeps || 0;
+      yeps++;
+      container.yeps = yeps;
+      label.innerHTML = container.yeps;
+    }
+  });
+
+  document.body.addEventListener('deckempty', function(ev) {
+    var container = ev.detail.container;
+    var list = container.querySelector('.cardlist');
+    var out = '<li class="card current">#1</li>';
+    for (var i = 2; i < 6; i++) {
+      out += '<li class="card">#' + i + '</li>';
+    }
+    list.innerHTML = out;
+  });
+
+
+</script>
+
+
+<script type="text/javascript">
+function addComment(){
+    var userComment = document.getElementById("userComment").value;
+  document.getElementById("ui-state-default").innerHTML = userComment;
+}
+</script>
+
+
+<script type="text/javascript">
+    function changeText(value) {
+    var div = document.getElementById("div");
+    var text = "";
+
+    if (value == 1) text += "this is one";
+    if (value == 2) text += "this is two";
+    if (value == 3) text += "this is tree";
+
+    div.innerHTML = text;
+  }
+</script>
+
+</body>
+</html>
+
+
+
